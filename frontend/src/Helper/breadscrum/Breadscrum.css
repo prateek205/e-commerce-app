@@ -1,0 +1,23 @@
+.breadscrum{
+    display: flex;
+    gap: 10px;
+}
+.pathName{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.seperator i{
+    font-size: 12px;
+}
+
+.value a{
+    color: rgb(97, 97, 255);
+}
+.value a:hover{
+    text-decoration: underline;
+}
+.current{
+    color: orange;
+    font-weight: 600;
+}

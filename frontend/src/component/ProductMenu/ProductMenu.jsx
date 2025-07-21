@@ -7,23 +7,29 @@ import { Link, useLocation } from "react-router-dom";
 const ProductMenu = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
-  const selectedCategory = searchParams.get("category");
-  const selectedBrand = searchParams.get("brand");
-
+  const selectCategory = searchParams.get("category");
+  const selectBrand = searchParams.get("brand");
+  const categoryParams = selectCategory ? selectCategory.split(",") : [];
+  const brandParams = selectBrand ? selectBrand.split(",") : [];
   const { filterProduct } = useStore();
 
   const filterByCategoryAndBrand = filterProduct.filter((product) => {
-    const matchCategory = selectedCategory
-      ? product.category.toLowerCase() === selectedCategory.toLowerCase()
-      : true;
+    const matchCategory =
+      categoryParams.length > 0
+        ? categoryParams.some(
+            (cat) => cat.toLowerCase() === product.toLowerCase()
+          )
+        : true;
 
-    const matchBrand = selectedBrand
-      ? product.brand.toLowerCase() === selectedBrand.toLowerCase()
-      : true;
-  
-      return matchCategory && matchBrand
-  
-    });
+    const matchBrand =
+      brandParams.length > 0
+        ? brandParams.some(
+            (brand) => brand.toLowerCase() === product.toLowerCase()
+          )
+        : true;
+
+    return matchCategory && matchBrand;
+  });
 
   const initialCount = 18;
   const [showProduct, setShowProduct] = useState(
@@ -74,7 +80,7 @@ const ProductMenu = () => {
                     <img src={item.images} alt="" />
                   </div>
                   <div className="product_menu_content">
-                    <Link to={`/product/${item._id}`}>
+                    <Link to={`/product/${item.category}/${item._id}`}>
                       <div className="product_menu_heading">
                         <h2>{item.title.slice(0, 120)}</h2>
                       </div>

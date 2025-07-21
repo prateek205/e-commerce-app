@@ -5,6 +5,7 @@ import { useStore } from "../../context/storeContext";
 import { useCart } from "../../context/cartContext";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
+import Breadscrum from "../../Helper/breadscrum/Breadscrum";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -61,9 +62,10 @@ const ProductDetail = () => {
             </div>
           </div>
           <div className="productDetailContainerRight">
-            <Link to="/product" className="link">
-              Back to Products
-            </Link>
+            <div className="breads">
+              <Breadscrum />
+            </div>
+
             <div className="productDetailContainerTitle">
               <h2>{product.title}</h2>
             </div>

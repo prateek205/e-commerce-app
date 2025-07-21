@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./ProdList.css";
 import ProductMenu from "../ProductMenu/ProductMenu";
 import { useStore } from "../../context/storeContext";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import Breadscrum from "../../Helper/breadscrum/Breadscrum";
 
 const ProdList = () => {
   const brands = [
@@ -36,6 +37,9 @@ const ProdList = () => {
     "Smartwatches",
   ];
 
+  // const navigate = useNavigate();
+  // const location = useLocation();
+
   const [showAllBrands, setShowAllBrands] = useState(false);
   const brandLimit = 5;
 
@@ -55,32 +59,34 @@ const ProdList = () => {
     maxPrice,
   } = useStore();
 
-  const location = useLocation();
-  const searchParams = new URLSearchParams(location.search);
-  const selectedCategory = searchParams.get("category");
-  const selectedBrand = searchParams.get("brand");
-
   // handle the check and uncheck brand and Category
 
   const filterByCategoryAndBrand = filterProduct.filter((product) => {
-    const matchCategory = selectedCategory
-      ? product.category.toLowerCase() === selectedCategory.toLowerCase()
-      : true;
+    const matchCategory =
+      selectCategory.length > 0
+        ? selectCategory.some(
+            (cat) => cat.toLowerCase() === product.category.toLowerCase()
+          )
+        : true;
 
-    const matchBrand = selectedBrand
-      ? product.brand.toLowerCase() === selectedBrand.toLowerCase()
-      : true;
-  
-      return matchCategory && matchBrand
-  
-    });
+    const matchBrand =
+      selectBrand.length > 0
+        ? selectBrand.some(
+            (brand) => brand.toLowerCase() === product.brand.toLowerCase()
+          )
+        : true;
+
+    return matchCategory && matchBrand;
+  });
 
   const handleCategoryChange = (category) => {
     setSelectCategory((prev) => {
       return prev.includes(category)
-        ? prev.filter((c) => c !== category)
+        ? prev.filter((b) => b !== category)
         : [...prev, category];
     });
+    const params = new URLSearchParams(location.search);
+    navigate(`${location.pathname}?${params.toString()}`);
   };
 
   const handleBrandChange = (brand) => {
@@ -163,10 +169,13 @@ const ProdList = () => {
           </div>
         </div>
         <div className="product_list_right">
+          <div className="breadscrums">
+            <Breadscrum />
+          </div>
           <div className="allProd">
             <p>
-              All Products: <span> {filterByCategoryAndBrand.length} </span> Items out of{" "}
-              <span>{products.length}</span> Items
+              All Products: <span> {filterByCategoryAndBrand.length} </span>{" "}
+              Items out of <span>{products.length}</span> Items
             </p>
           </div>
           <div className="product_sort_list">

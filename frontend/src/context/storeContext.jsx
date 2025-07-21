@@ -4,6 +4,8 @@ import { product_list } from "../assets/asset";
 const StoreContext = createContext();
 
 export const StoreProvider = ({ children }) => {
+  // Use Location for fetch all products
+
   // To show all the product with filter product also
   const [products] = useState(product_list);
   const [filterProduct, setFilterProduct] = useState(product_list);
@@ -20,6 +22,7 @@ export const StoreProvider = ({ children }) => {
   const [priceRange, setPriceRange] = useState([minPrice, maxPrice]);
 
   // Update the value using the useEffect
+
   useEffect(() => {
     // defnied the product list with variable
     let filtered = [...products];

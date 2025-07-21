@@ -91,6 +91,9 @@ img.activeProduct {
   width: 50%;
   padding: 10px 8px;
 }
+.productDetailContainerRight .breads{
+  font-size: 14px;
+}
 .productDetailContainerRight .productDetailContainerTitle h2 {
   font-size: max(1.5vw, 20px);
   font-weight: 400;

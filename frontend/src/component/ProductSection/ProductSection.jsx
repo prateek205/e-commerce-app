@@ -16,7 +16,7 @@ const ProductSection = () => {
               <div
                 key={index}
                 className="product_list"
-                onClick={() => navigate(`/product?category=${item.category}`)}
+                onClick={() => navigate(`/product/${item.category}`)}
               >
                 <img src={item.product_image} alt="" className="product_img" />
                 <p>{item.product_name}</p>

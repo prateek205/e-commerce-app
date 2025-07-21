@@ -1,29 +1,29 @@
 import "./styles.css";
-import Navbar from "./component/Navbar/Navbar";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Product from "./pages/Product/Product";
+import CategoryLists from "./pages/CategoryLists/CategoryLists";
 import Wishlist from "./pages/Wishlist/Wishlist";
 import Cart from "./pages/Cart/Cart";
-import Footer from "./component/Footer/Footer";
-import ProductDetails from "./pages/productDetails/ProductDetails.jsx";
-import Scrolling from "./Helper/Scrolling/Scrolling.jsx";
-import ScrollTop from "./component/ScrollTop/ScrollTop.jsx";
+import ProductDetails from "./pages/productDetails/ProductDetails";
+import CategoryDetails from "./pages/CategoryDetails/CategoryDetails";
+import Layout from "./component/Layout/Layout";
 
 const App = () => {
   return (
     <div className="app">
-      <Navbar />
-      <Scrolling />
-      <ScrollTop />
       <Routes>
-        <Route path="/" element=<Home /> />
-        <Route path="/product" element=<Product /> />
-        <Route path="/product/:id" element=<ProductDetails /> />
-        <Route path="/wishlist" element=<Wishlist /> />
-        <Route path="/cart" element=<Cart /> />
+        <Route element=<Layout />>
+          <Route path="/" element=<Home /> />
+          <Route path="/product" element=<Product /> />
+          <Route path="/product/:category" element=<Product /> />
+          <Route path="/product/:category/:id" element=<ProductDetails /> />
+          <Route path="/product/:category" element=<CategoryLists /> />
+          <Route path="/product/:category/:id" element=<CategoryDetails /> />
+          <Route path="/wishlist" element=<Wishlist /> />
+          <Route path="/cart" element=<Cart /> />
+        </Route>
       </Routes>
-      <Footer />
     </div>
   );
 };

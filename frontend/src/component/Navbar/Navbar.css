@@ -1,0 +1,247 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(19, 25, 33);
+  padding: 8px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.navbar .logo {
+  /* border: 2px solid black; */
+  width: 130px;
+  height: 40px;
+  object-fit: cover;
+  filter: invert(1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-address{
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+.nav-address .address{
+  font-weight: 300;
+  font-size: max(1vw, 12px);
+}
+.nav-address .location{
+  font-weight: 600;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: end;
+  justify-content: space-evenly;
+  gap: 40px;
+}
+.navbar-right .language{
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.navbar-right .language .lan{
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+}
+.nav-account{
+  position: relative;
+  display: flex;
+  align-items: end;
+  gap: 5px;
+  cursor: pointer;
+}
+.account{
+  display: flex;
+  flex-direction: column;
+}
+.nav-account .strong, .nav-account .bold{
+  color: #fff;
+}
+.nav-account .strong{
+  font-weight: 300;
+  font-size: max(1vw, 12px);
+}
+.nav-account .bold{
+  text-align: right;
+  font-weight: 600;
+  font-size: 14px;
+}
+.nav-account .down-arrow{
+  color: #fff;
+}
+.accountList{
+  position: absolute;
+  top: 46px;
+  width: 100%;
+  /* border: 2px solid black; */
+  background-color: #fff;
+}
+.accountList .ac-item{
+  padding: 2px 5px;
+}
+.accountList .ac-item li{
+  padding: 5px 0px;
+  font-size: 14px;
+}
+.accountList .ac-item li:hover{
+  background-color: #e2e2e2;
+}
+.navbar-right .icon {
+  width: 40px;
+}
+.navbar_cart_icon,
+.navbar_wish_icon {
+  cursor: pointer;
+}
+.navbar_cart_icon {
+  display: flex;
+  align-items: end;
+  gap: 2px;
+  position: relative;
+}
+.navbar_cart_icon .count{
+  position: absolute;
+  top: -5px;
+  left: 13px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fb641b;
+}
+.navbar_cart_icon .icon{
+  width: 30px;
+  filter: invert(1);
+}
+.navbar_cart_icon .crt{
+  color: #fff;
+  font-weight: 500;
+}
+.navbar_wish_icon{
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+.navbar_wish_icon .ret{
+  font-size: 13px;
+}
+.navbar_wish_icon .or{
+  font-size: 14px;
+  font-weight: 700;
+}
+.navbar_search_bar {
+  position: relative;
+  /* border: 2px solid white; */
+  display: flex;
+  align-items: center;
+  width: 45%;
+  height: 38px;
+}
+.navbar_search_bar .all{
+  padding: 13px 20px 10px 15px;
+  background-color: #808080;
+  border-radius: 3px 0px 0px 3px;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+.navbar_search_bar input {
+  font-size: 17px;
+  width: 100%;
+  padding: 7px 10px 10px 7px;
+  border: none;
+  outline: none;
+  /* background-color: black; */
+}
+
+.navbar_search_bar span img {
+  width: 45px;
+  object-fit: contain;
+  border-radius: 0px 3px 3px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(228, 121, 17);
+  cursor: pointer;
+}
+
+.navbar_search_bar .suggestionList{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 280px;
+  z-index: 2000;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+}
+.suggestionList li{
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.suggestionList li:hover{
+  background-color: #e2e2e2;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar .logo {
+    width: 140px;
+  }
+  .navbar .navbar_list {
+    gap: 10px;
+    font-size: 17px;
+  }
+  .navbar .navbar-right {
+    gap: 8px;
+  }
+  .navbar .navbar-right .icon {
+    width: 30px;
+  }
+  .navbar .navbar-right button {
+    padding: 8px 17px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navbar .logo {
+    width: 120px;
+  }
+  .navbar .navbar_list {
+    display: none;
+  }
+  .navbar .navbar-right {
+    gap: 8px;
+  }
+  .navbar .navbar-right .icon {
+    width: 30px;
+  }
+  .navbar .navbar-right button {
+    padding: 8px 17px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .navbar .logo {
+    width: 120px;
+  }
+  .navbar .navbar_list {
+    display: none;
+  }
+  .navbar .navbar-right {
+    gap: 4px;
+  }
+  .navbar .navbar-right .icon {
+    width: 25px;
+  }
+  .navbar .navbar-right button {
+    padding: 4px 12px;
+  }
+}

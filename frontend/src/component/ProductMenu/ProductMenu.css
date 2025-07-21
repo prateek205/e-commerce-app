@@ -1,0 +1,119 @@
+.product_menu_list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.product_menu_item{
+    border: 1px solid #d4d4d4;
+    display: flex;
+    gap: 10px;
+}
+.product_menu_content{
+    /* border: 2px solid black; */
+    width: 80%;
+    padding: 5px 8px;
+}
+.product_menu_heading h2{
+    font-size: max(1.2vw, 16px);
+    padding: 5px 10px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.product_menu_heading h2:hover{
+    color: rgb(230, 0, 0);
+}
+.product_spefication li{
+    margin-top: 5px;
+    padding: 0px 8px;
+    font-size: max(1vw, 16px);
+    font-weight: 300;
+}
+.product_menu_item_img{
+    /* border: 2px solid black; */
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee9c;
+}
+.product_menu_item_img img{
+    width: 220px;
+    height: 200px;
+    object-fit: contain;
+}
+.product_item_price{
+    padding: 10px 8px;
+    display: flex;
+    align-items: end;
+    /* flex-direction: column; */
+    gap: 5px;
+}
+.product_item_price .discount_price, .product_item_price .main_price{
+    font-size: max(1.8vw, 25px);
+    font-weight: 400;
+}
+.product_item_price .org_price{
+    font-size: max(1vw, 12px);
+    color: grey;
+    text-decoration: line-through;
+    font-weight: 300;
+}
+.product_item_price .mrp{
+    font-size: max(1vw, 12px);
+    color: grey;
+}
+.product_item_price .discount{
+    color: green;
+    font-size: max(1vw, 12px);
+    font-weight: 500;
+}
+.bothPrice{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.rightBoth{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 20%;
+}
+.productAddBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.productAddBtn button{
+    font-size: max(1.2vw, 18px);
+    border: none;
+    outline: none;
+    background-color: #ff9f00;
+    color: #ffffff;
+    padding: 4px 2px;
+    cursor: pointer;
+    width: 100%;
+}
+
+hr{
+    padding-bottom: 2px;
+}
+.loadMore_btn{
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    color: rgb(8, 102, 119);
+    font-size: max(1vw, 16px);
+    text-align: center;
+    background-color: transparent;
+    cursor: pointer;
+}
+.specifications{
+    padding: 10px 15px;
+}
+.specifications li{
+    padding-bottom: 10px;
+    font-size: max(1vw,15px);
+    font-weight: 300;
+    list-style: disc;
+}

@@ -1,0 +1,123 @@
+.hr{
+    border-bottom: 0.1px solid rgb(216, 216, 216);
+    padding: 2px 0px;
+}
+.productList{
+    width: 100%;
+    display: flex;
+    gap: 5px;
+}
+.product_list_left{
+    /* border: 2px solid rgb(216, 216, 216); */
+    /* box-shadow: 0px 0px 3px rgb(165, 165, 165); */
+    width: 20%;
+    /* height: 520px; */
+    padding: 6px 8px;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.product_list_left::-webkit-scrollbar{
+    display: none;
+}
+
+.product_list_content h2{
+    font-weight: 500;
+    font-size: max(2.2vw, 25px);
+    padding: 5px 0px;
+}
+.filter_cat_List, .filter_brand_menu{
+    padding-bottom: 10px;
+}
+.filter_brand_menu h3, .filter_cat_List h3, .filter_price_section h3{
+    font-weight: 500;
+    font-size: max(1vw,18px);
+    padding-top: 5px;
+}
+.filter_brand_list label, .filter_cat_menu label{
+    cursor: pointer;
+    margin: 5px 0px;
+}
+.filter_brand_list label:hover, .filter_cat_menu label:hover{
+    color: rgb(230, 0, 0);
+}
+.filter_brand_list li, .filter_cat_menu li{
+    font-size: max(0.5vw, 15px);
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+.filter_price_section{
+    padding-bottom: 5px;
+}
+.filter_price_section input{
+    width: 100%;
+}
+
+.product_list_right{
+    /* border: 2px solid rgb(216, 216, 216); */
+    /* box-shadow: 0px 0px 3px rgb(165, 165, 165); */
+    width: 80%;
+    border-radius: 2px;
+}
+.product_sort_list, .allProd{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 8px;
+}
+.allProd p{
+    font-weight: 300;
+}
+.allProd span{
+    font-size: max(1vw, 16px);
+    font-weight: 500;
+}
+hr{
+    width: 98%;
+    margin: auto;
+    border: none;
+    border-bottom: 1px solid rgb(216, 216, 216);
+}
+.product_sort_list p{
+    font-weight: 500;
+    font-size: max(1.2vw, 18px);
+}
+.product_sort_list button{
+    font-size: max(1.2vw, 15px);
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 300;
+}
+.product_sort_list button:hover{
+    color: rgb(230, 0, 0);
+}
+.product_menu_list{
+    padding: 10px 8px;
+}
+.load_btn{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin: 10px 0px;
+    font-size: max(1vw, 15px);
+    color: rgb(8, 102, 119);
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:768px){
+    .productList{
+        flex-direction: column;
+    }
+    .product_list_left{
+        width: 100%;
+        display: none;
+    }
+    .product_list_right{
+        width: 100%;
+    }
+}

@@ -1,0 +1,141 @@
+.hero {
+  height: 32.5vw;
+  background: url("/ecombanner.jpg") no-repeat;
+  background-size: contain;
+  position: relative;
+  border-radius: 10px;
+  margin: 18px 10px;
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.28);
+}
+.hero .hero_content {
+  position: absolute;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 48%;
+  top: 4%;
+  left: 2.5vw;
+  animation: fadeIn 2.5s;
+}
+.hero .hero_content h2 {
+  font-weight: 500;
+  color: #ffffff;
+  font-size: max(4.5vw, 25px);
+}
+.hero .hero_content p {
+  font-size: 16px;
+  color: #ffffff;
+}
+.hero .btn {
+  display: flex;
+  gap: 10px;
+}
+.hero .btn button {
+  border: none;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 20px;
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.hero .btn button:hover {
+  background-color: rgba(194, 251, 255, 0.959);
+}
+
+@media screen and (max-width: 1024px) {
+  .hero .hero_content {
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero .hero_content {
+    gap: 10px;
+  }
+  .hero .hero_content p {
+    font-size: 12px;
+  }
+  .hero .btn button {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero {
+    height: 26.5vw;
+    background-size: contain;
+  }
+
+  .hero .hero_content {
+    max-width: 50%;
+    gap: 15px;
+  }
+  .hero .hero_content p {
+    display: none;
+  }
+  .hero .btn button {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .hero .hero_content {
+    max-width: 45%;
+    gap: 10px;
+  }
+  .hero .hero_content p {
+    font-size: 8px;
+  }
+  .hero .btn button {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .hero .hero_content {
+    max-width: 50%;
+    gap: 4px;
+  }
+  .hero .btn button {
+    padding: 5px 6px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .hero {
+    height: 27vw;
+  }
+
+  .hero .hero_content {
+    max-width: 50%;
+    gap: 8px;
+  }
+  .hero .hero_content h2 {
+    font-size: 20px;
+  }
+  .hero .hero_content p {
+    /* display: none; */
+    font-size: 7px;
+  }
+  .hero .btn button {
+    padding: 5px 8px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .hero .hero_content {
+    max-width: 50%;
+    gap: 2px;
+  }
+  .hero .btn button {
+    padding: 3px 5px;
+    font-size: 10px;
+  }
+}

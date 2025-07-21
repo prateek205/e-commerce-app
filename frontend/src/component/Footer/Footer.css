@@ -1,0 +1,101 @@
+.footer{
+    height: 12vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+    background-color: rgb(35, 47 , 62);
+}
+.footer_item_list{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.footer_content h2{
+    font-weight: 500;
+    font-size: max(1.2vw, 12px);
+    color: rgb(221, 221, 221);
+}
+.about_item li, .grpOfCompanies li, .help li{
+    margin-top: 10px;
+    color: rgba(153,153,153);
+    font-size: max(1vw, 16px);
+}
+.footer_contact{
+    padding: 0px 20px;
+    border-left: 1px solid #ffffff;
+}
+.footer_content p{
+    color: rgb(221, 221, 221);
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: max(1vw, 16px);
+}
+.footer_copyright p{
+    padding: 7px 0px;
+    text-align: center;
+    color: #ffffff;
+    font-size: max(1vw,16px);
+    background-color: rgba(19,26,34);
+}
+
+@media screen and (max-width:1024px){
+    .footer{
+        height: 16vw;
+    }
+    .footer_content h2{
+        font-size: 15px;
+    }
+    .about_item li, .grpOfCompanies li, .help li{
+        font-size: 15px;
+    }
+    .footer_content p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .footer{
+        height: 16vw;
+    }
+    .footer_content h2{
+        font-size: 12px;
+    }
+    .about_item li, .grpOfCompanies li, .help li{
+        font-size: 10px;
+    }
+    .footer_content p{
+        font-size: 10px;
+    }
+    .footer_copyright p{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .footer{
+        height: auto;
+        padding: 10px 8px;
+    }
+    .footer_item_list{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer_content h2{
+        font-size: 12px;
+    }
+    .about_item li, .grpOfCompanies li, .help li{
+        font-size: 10px;
+        margin-top: 5px;
+    }
+    .footer_contact{
+        border-left: none;
+        padding-left: 0;
+    }
+    .footer_content p{
+        font-size: 10px;
+        margin-top: 5px;
+    }
+    .footer_copyright p{
+        font-size: 12px;
+    }
+}

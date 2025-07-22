@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import "./ProdList.css";
 import ProductMenu from "../ProductMenu/ProductMenu";
 import { useStore } from "../../context/storeContext";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+// import { useLocation, useNavigate, useParams } from "react-router-dom";
 import Breadscrum from "../../Helper/breadscrum/Breadscrum";
+import { useNavigate } from "react-router-dom";
 
 const ProdList = () => {
   const brands = [
@@ -37,8 +38,7 @@ const ProdList = () => {
     "Smartwatches",
   ];
 
-  // const navigate = useNavigate();
-  // const location = useLocation();
+  const navigate = useNavigate();
 
   const [showAllBrands, setShowAllBrands] = useState(false);
   const brandLimit = 5;
@@ -81,12 +81,18 @@ const ProdList = () => {
 
   const handleCategoryChange = (category) => {
     setSelectCategory((prev) => {
-      return prev.includes(category)
+      const update = prev.includes(category)
         ? prev.filter((b) => b !== category)
         : [...prev, category];
+
+      if (update.length === 0) {
+        navigate("/product");
+      } else {
+        navigate(`/product/${update[0]}`);
+      }
+
+      return update;
     });
-    const params = new URLSearchParams(location.search);
-    navigate(`${location.pathname}?${params.toString()}`);
   };
 
   const handleBrandChange = (brand) => {

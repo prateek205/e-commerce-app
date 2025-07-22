@@ -1,68 +1,77 @@
-import React from "react";
 import "./Breadscrum.css";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { useStore } from "../../context/storeContext";
 
 const Breadscrum = () => {
-  const formatName = (segment) => {
-    return segment.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
-  };
-
-  const location = useLocation();
-  const pathnames = location.pathname.split("/").filter(Boolean);
-
   const { selectCategory, selectBrand } = useStore();
+  const location = useLocation();
+  const { id } = useParams();
+
+  const formatName = (segment) =>
+    segment.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+
+  const pathnames = location.pathname.split("/").filter(Boolean);
+  const isDetailPage = id && pathnames.length === 3;
 
   return (
-    <React.Fragment>
-      <div className="breadscrum">
-        <span className="value">
-          <Link to="/">Home</Link>
+    <div className="breadscrum">
+      <span className="value">
+        <Link to="/">Home</Link>
+      </span>
+
+      <span className="pathName">
+        <span className="seperator">
+          <i className="fa-solid fa-angle-right"></i>
         </span>
-        {pathnames.map((segment, index) => {
-          const fullPath = "/" + pathnames.slice(0, index + 1).join("/");
-          const isLast = index === pathnames.length - 1;
+        <span className="current">
+          <Link to="/product">Product</Link>
+        </span>
+      </span>
 
-          return (
-            <span key={fullPath} className="pathName">
-              <span className="seperator">
-                <i className="fa-solid fa-angle-right"></i>
-              </span>
-              {isLast ? (
-                <span className="current">{formatName(segment)}</span>
-              ) : (
-                <span className="value">
-                  <Link to={fullPath}>{formatName(segment)}</Link>
-                </span>
-              )}
+      {isDetailPage && (
+        <>
+          <span className="pathName">
+            <span className="seperator">
+              <i className="fa-solid fa-angle-right"></i>
             </span>
-          );
-        })}
+            <span className="current">
+              <Link to={`/product/${pathnames[1]}`}>
+                {formatName(pathnames[1])}
+              </Link>
+            </span>
+          </span>
 
-        {selectCategory.map((cat, index) => {
-          return (
-            <span key={index}>
+          <span className="pathName">
+            <span className="seperator">
+              <i className="fa-solid fa-angle-right"></i>
+            </span>
+            <span className="current">{id}</span>
+          </span>
+        </>
+      )}
+
+      {!isDetailPage && (
+        <>
+          {selectCategory.map((cat, index) => (
+            <span key={index} className="pathName">
               <span className="seperator">
                 <i className="fa-solid fa-angle-right"></i>
               </span>
               <span className="current">{formatName(cat)}</span>
             </span>
-            
-          );
-        })}
+          ))}
 
-        {selectBrand.map((brand, index) => {
-          return (
-            <span key={index}>
+          {selectBrand.map((brand, index) => (
+            <span key={`brand-${index}`} className="pathName">
               <span className="seperator">
                 <i className="fa-solid fa-angle-right"></i>
               </span>
               <span className="current">{formatName(brand)}</span>
             </span>
-          );
-        })}
-      </div>
-    </React.Fragment>
+          ))}
+        </>
+      )}
+    </div>
   );
 };
 

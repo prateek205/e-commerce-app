@@ -16,16 +16,12 @@ const ProductMenu = () => {
   const filterByCategoryAndBrand = filterProduct.filter((product) => {
     const matchCategory =
       categoryParams.length > 0
-        ? categoryParams.some(
-            (cat) => cat.toLowerCase() === product.toLowerCase()
-          )
+        ? categoryParams.includes(product.category?.toLowerCase())
         : true;
 
     const matchBrand =
       brandParams.length > 0
-        ? brandParams.some(
-            (brand) => brand.toLowerCase() === product.toLowerCase()
-          )
+        ? brandParams.includes(product.brand?.toLowerCase())
         : true;
 
     return matchCategory && matchBrand;

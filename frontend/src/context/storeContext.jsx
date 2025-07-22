@@ -1,10 +1,15 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { product_list } from "../assets/asset";
+import {useLocation, useParams, useSearchParams} from "react-router-dom"
 
 const StoreContext = createContext();
 
 export const StoreProvider = ({ children }) => {
-  // Use Location for fetch all products
+
+  // Update the Breadscrumb and Count
+  const location = useLocation()
+  const {categories} = useParams()
+  const [searchParams] = useSearchParams()
 
   // To show all the product with filter product also
   const [products] = useState(product_list);
@@ -21,8 +26,31 @@ export const StoreProvider = ({ children }) => {
   const maxPrice = Math.max(...allPrice);
   const [priceRange, setPriceRange] = useState([minPrice, maxPrice]);
 
-  // Update the value using the useEffect
+  // apply useEffect for Udpate the value
+  useEffect(() => {
+    const categoryURL = categories || ""
+    const brandURL = searchParams.get("brand")
 
+    if(categoryURL && !selectCategory.includes(categoryURL)){
+      setSelectCategory([categoryURL])
+    }
+
+    if(categoryURL && selectCategory.length > 0){
+      setSelectCategory([])
+    }
+
+    if(brandURL && !selectBrand.includes(brandURL)){
+      setSelectBrand([brandURL])
+    }
+
+    if(brandURL && selectBrand.length > 0){
+      setSelectBrand([])
+    }
+
+  }, [location, categories, searchParams])
+   
+
+  // Update the value using the useEffect
   useEffect(() => {
     // defnied the product list with variable
     let filtered = [...products];

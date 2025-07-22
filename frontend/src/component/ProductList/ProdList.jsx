@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./ProdList.css";
 import ProductMenu from "../ProductMenu/ProductMenu";
 import { useStore } from "../../context/storeContext";
-// import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import Breadscrum from "../../Helper/breadscrum/Breadscrum";
-import { useNavigate } from "react-router-dom";
 
 const ProdList = () => {
   const brands = [
@@ -39,6 +38,9 @@ const ProdList = () => {
   ];
 
   const navigate = useNavigate();
+  const { categories } = useParams();
+  const [searchParams] = useSearchParams();
+  const brandItem = searchParams.get("brand");
 
   const [showAllBrands, setShowAllBrands] = useState(false);
   const brandLimit = 5;
@@ -64,16 +66,12 @@ const ProdList = () => {
   const filterByCategoryAndBrand = filterProduct.filter((product) => {
     const matchCategory =
       selectCategory.length > 0
-        ? selectCategory.some(
-            (cat) => cat.toLowerCase() === product.category.toLowerCase()
-          )
+        ? selectCategory.includes(product.category.toLowerCase())
         : true;
 
     const matchBrand =
       selectBrand.length > 0
-        ? selectBrand.some(
-            (brand) => brand.toLowerCase() === product.brand.toLowerCase()
-          )
+        ? selectBrand.includes(product.brand.toLowerCase())
         : true;
 
     return matchCategory && matchBrand;
@@ -97,11 +95,21 @@ const ProdList = () => {
 
   const handleBrandChange = (brand) => {
     setSelectBrand((prev) => {
-      return prev.includes(brand)
+      const updated = prev.includes(brand)
         ? prev.filter((b) => b !== brand)
         : [...prev, brand];
+
+      if (updated.length === 0) {
+        navigate("/product");
+      } else {
+        navigate(`/product/${updated[0]}`);
+      }
+
+      return updated;
     });
   };
+
+
 
   return (
     <React.Fragment>

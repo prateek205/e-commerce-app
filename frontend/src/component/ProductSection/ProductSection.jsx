@@ -6,6 +6,14 @@ import { useNavigate } from "react-router-dom";
 const ProductSection = () => {
   const navigate = useNavigate();
 
+  const handleClickCategory = (category) => {
+    navigate(`/product?category=${category.toLowerCase()}`);
+  };
+
+  const handleClickBrand = (brand) => {
+    navigate(`/product?brand=${brand.toLowerCase()}`);
+  };
+
   return (
     <React.Fragment>
       <div className="product_category">
@@ -16,7 +24,7 @@ const ProductSection = () => {
               <div
                 key={index}
                 className="product_list"
-                onClick={() => navigate(`/product/${item.category}`)}
+                onClick={() => handleClickCategory(item.category)}
               >
                 <img src={item.product_image} alt="" className="product_img" />
                 <p>{item.product_name}</p>
@@ -34,7 +42,7 @@ const ProductSection = () => {
               <div
                 key={index}
                 className="product_brand_menu"
-                onClick={()=>navigate(`/product?brand=${item.brand_name.toLowerCase()}`)}
+                onClick={() => handleClickBrand(item.brand_name)}
               >
                 <img src={item.brand_image} alt="" />
                 <p>{item.brand_name}</p>

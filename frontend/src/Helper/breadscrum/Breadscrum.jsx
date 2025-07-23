@@ -3,15 +3,16 @@ import { Link, useLocation, useParams } from "react-router-dom";
 import { useStore } from "../../context/storeContext";
 
 const Breadscrum = () => {
-  const { selectCategory, selectBrand } = useStore();
+  const { selectCategory, selectBrand, filterProduct } = useStore();
   const location = useLocation();
-  const { id } = useParams();
+  const { category, brand, id } = useParams();
 
   const formatName = (segment) =>
     segment.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
 
   const pathnames = location.pathname.split("/").filter(Boolean);
   const isDetailPage = id && pathnames.length === 3;
+
 
   return (
     <div className="breadscrum">
@@ -40,35 +41,45 @@ const Breadscrum = () => {
               </Link>
             </span>
           </span>
-
-          <span className="pathName">
-            <span className="seperator">
-              <i className="fa-solid fa-angle-right"></i>
-            </span>
-            <span className="current">{id}</span>
-          </span>
         </>
       )}
 
       {!isDetailPage && (
         <>
-          {selectCategory.map((cat, index) => (
-            <span key={index} className="pathName">
+          {category && (
+            <span className="pathName">
               <span className="seperator">
                 <i className="fa-solid fa-angle-right"></i>
               </span>
-              <span className="current">{formatName(cat)}</span>
+              <span className="current">
+                <Link to={`/product?category=${category}`}>
+                  {formatName(category)}
+                </Link>
+              </span>
             </span>
-          ))}
+          )}
 
-          {selectBrand.map((brand, index) => (
-            <span key={`brand-${index}`} className="pathName">
+          {brand && (
+            <span className="pathName">
               <span className="seperator">
                 <i className="fa-solid fa-angle-right"></i>
               </span>
-              <span className="current">{formatName(brand)}</span>
+              <span className="current">
+                <Link to={`/product?category=${category}&brand=${brand}`}>
+                  {formatName(brand)}
+                </Link>
+              </span>
             </span>
-          ))}
+          )}
+
+          {id && (
+            <span className="pathName">
+              <span className="seperator">
+                <i className="fa-solid fa-angle-right"></i>
+              </span>
+              <span className="current">{id}</span>
+            </span>
+          )}
         </>
       )}
     </div>

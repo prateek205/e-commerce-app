@@ -2,15 +2,20 @@ import React from "react";
 import "./ProductSection.css";
 import { brand_menu_list, product_menu } from "../../assets/asset";
 import { useNavigate } from "react-router-dom";
+import { useStore } from "../../context/storeContext";
 
 const ProductSection = () => {
   const navigate = useNavigate();
 
+  const {setSelectCategory, setSelectBrand} = useStore()
+
   const handleClickCategory = (category) => {
+    setSelectCategory([category.toLowerCase()])
     navigate(`/product?category=${category.toLowerCase()}`);
   };
 
   const handleClickBrand = (brand) => {
+    setSelectBrand([brand.toLowerCase()])
     navigate(`/product?brand=${brand.toLowerCase()}`);
   };
 

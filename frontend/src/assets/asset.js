@@ -298,17 +298,17 @@ export const product_menu = [
     category: "smartphones",
   },
   {
-    product_name: "Laptops",
+    product_name: "laptops",
     product_image: laptop_menu,
     category: "laptops",
   },
   {
-    product_name: "Smartwatches",
+    product_name: "smartwatches",
     product_image: smartwatch_menu,
     category: "smartwatches",
   },
   {
-    product_name: "Home Appliances",
+    product_name: "Home_appliances",
     product_image: home_appliances,
     category: "appliances",
   },
@@ -321,7 +321,7 @@ export const product_menu = [
 
 export const brand_menu_list = [
   {
-    brand_name: "Apple",
+    brand_name: "apple",
     brand_image: apple_brand,
   },
   {
@@ -333,7 +333,7 @@ export const brand_menu_list = [
     brand_image: hp_brand,
   },
   {
-    brand_name: "Samsung",
+    brand_name: "samsung",
     brand_image: samsung_brand,
   },
   {
@@ -341,11 +341,11 @@ export const brand_menu_list = [
     brand_image: haier_brand,
   },
   {
-    brand_name: "IFB",
+    brand_name: "ifb",
     brand_image: ifb_brand,
   },
   {
-    brand_name: "LG",
+    brand_name: "lg",
     brand_image: lg_brand,
   },
   {
@@ -353,15 +353,15 @@ export const brand_menu_list = [
     brand_image: llyod_brand,
   },
   {
-    brand_name: "Oneplus",
+    brand_name: "oneplus",
     brand_image: oneplus_brand,
   },
   {
-    brand_name: "Panasonic",
+    brand_name: "panasonic",
     brand_image: panasonic_brand,
   },
   {
-    brand_name: "Redmi",
+    brand_name: "redmi",
     brand_image: redmi_brand,
   },
   {
@@ -380,7 +380,7 @@ export const product_list = [
     title:
       "Samsung 1.5 Ton 3 Star AI Inverter Smart Split AC (WiFi, Energy Saving, Voice Control, Powerful Cooling, Copper, Digital Inverter, 4 Way swing, 5 Step Convertible, BESPOKE AI AR50F18D1LHNNA)",
     model: "Samsung(Air Conditioner (1.5 Ton))",
-    category: "Appliances",
+    category: "appliances",
     images: samsung_ac,
     productImage: [
       samsung_ac,
@@ -391,7 +391,7 @@ export const product_list = [
       samsung_ac_5,
     ],
     specifications: [
-      "Samsung",
+      "samsung",
       "1.5 Tons",
       "4.4 KiloWatts",
       "Digital Inverter Compressor",
@@ -404,7 +404,7 @@ export const product_list = [
       "Consumption : 852.47 Units Per Year.",
       "Warranty: 5 years comprehensive warranty, 10 Years Warranty on Digital Inverter Compressor Copper Condenser Coil: Better cooling and requires low maintenance.",
     ],
-    brand: "Samsung",
+    brand: "samsung",
     capacity: "1.5 Tons",
     coolingPower: "4.4 KiloWatts",
     specialFeatures:
@@ -417,7 +417,7 @@ export const product_list = [
     title:
       "Voltas 1.5 ton 3 Star, Inverter Split AC (Copper, 4-in-1 Adjustable Mode, Anti-dust Filter, 183V Vectra CAW, White)",
     model: "Voltas(Air Conditioner (1.5 Ton))",
-    category: "Appliances",
+    category: "appliances",
     images: voltas_ac_white,
     productImage: [
       voltas_ac_white,
@@ -434,7 +434,7 @@ export const product_list = [
       "Remote Controlled",
       "Inverter Compressor",
     ],
-    brand: "Voltas",
+    brand: "voltas",
     capacity: 1.5,
     coolingPower: 4800,
     specialFeature:
@@ -454,7 +454,7 @@ export const product_list = [
     title:
       "Haier Limited Edition 1.6 Ton 5 Star AI Climate Control Smart Split AC (5460 Watts, Copper, HEXA Inverter, Heavy Duty, 4-Way Swing, Frost Clean, HD Filter, Cools at 60°C-HSU19K-PZAIB5BN-INV, Black)",
     model: "Haier(Air Conditioner (1.6 Ton))",
-    category: "Appliances",
+    category: "appliances",
     images: haier_ac_black,
     productImage: [
       haier_ac_black,
@@ -473,7 +473,7 @@ export const product_list = [
     ],
     price: 48790,
     discount: 41,
-    brand: "Haier",
+    brand: "haier",
     dimensions: "24D x 102W x 32H",
     capacity: 1.6,
     coolingpower: 5.46,
@@ -490,7 +490,7 @@ export const product_list = [
     title:
       "Lloyd 1.5 Ton 3 Star Inverter Split AC (5 in 1 Convertible, Copper, Anti-Viral + PM 2.5 Filter, 2023 Model, White with Chrome Deco Strip, GLS18I3FWAGC)",
     model: "Llyod(Air Conditioner (1.5 Ton))",
-    category: "Appliances",
+    category: "appliances",
     images: llyod_ac_white,
     productImage: [
       llyod_ac_white,
@@ -507,7 +507,7 @@ export const product_list = [
       "Golden Fin Evaporator",
       "Anti-Viral Filter + PM 2.5 Filter",
     ],
-    brand: "Lloyd",
+    brand: "lloyd",
     capacity: 1.5,
     coolingPower: 4.75,
     specialFeature:
@@ -528,7 +528,7 @@ export const product_list = [
     title:
       "Godrej 223 L 2 Star Nano Shield Technology, Inverter Frost Free Double Door Refrigerator(RF EON 244B RI ST GL, Steel Glow)",
     model: "Godrej(Refrigirator (223 Lit.))",
-    category: "Appliances",
+    category: "appliances",
     images: godrej_refrigirator_Steel,
     productImage: [
       godrej_refrigirator_Steel,
@@ -541,7 +541,7 @@ export const product_list = [
     specifications: ["Godrej", "223 Liters", "Double Door", "2 Stars"],
     price: 33690,
     discount: 40,
-    brand: "Godrej",
+    brand: "godrej",
     capacity: 223,
     configuration: "Double Door",
     beeStarRating: 2,
@@ -558,7 +558,7 @@ export const product_list = [
     title:
       "LG 242 L 3 Star Smart Inverter Frost-Free Double Door Refrigerator (GL-I292RPZX, Shiny Steel, Door Cooling+)",
     model: "LG(Refrigirator (242 Lit.))",
-    category: "Appliances",
+    category: "appliances",
     images: lg_refrigirator_grey,
     productImage: [
       lg_refrigirator_grey,
@@ -569,14 +569,14 @@ export const product_list = [
       lg_refrigirator_grey_5,
     ],
     specifications: [
-      "Lg",
+      "lg",
       "242 Liters",
       "3 Stars",
       "Full-Sized Freezer on Top",
     ],
     price: 37099,
     discount: 33,
-    brand: "Lg",
+    brand: "lg",
     capacity: 242,
     configuration: "Full-Sized Freezer on Top",
     beeStarRating: 3,
@@ -592,7 +592,7 @@ export const product_list = [
     title:
       "Haier 602 L, 3 Star, 100% Convertible Fridge Space, Expert Inverter, Frost Free Side by Side Refrigerator, (HRS-682KS, Black Steel)",
     model: "Haier(Refrigirator (602 Lit.))",
-    category: "Appliances",
+    category: "appliances",
     images: haier_refrigirator_black_steel,
     productImage: [
       haier_refrigirator_black_steel,
@@ -605,7 +605,7 @@ export const product_list = [
     specifications: ["Haier", "602 Liters", "3 Stars", "Side by Side"],
     price: 109390,
     discount: 43,
-    brand: "Haier",
+    brand: "haier",
     capacity: 602,
     configuration: "Side by Side",
     beeStarRating: 3,
@@ -621,7 +621,7 @@ export const product_list = [
     title:
       "Voltas Beko, A Tata Product 183 L 2 Star Direct Cool Single Door Refrigerator (RDC215D/S0WBR0M0000GO, Hairline Blue, With Fresh Box Technology and Chiller Zone)",
     model: "Voltas(Refrigirator (183 lit.))",
-    category: "Appliances",
+    category: "appliances",
     images: voltas_refrigirator_blue,
     productImage: [
       voltas_refrigirator_blue,
@@ -634,7 +634,7 @@ export const product_list = [
     specifications: ["Voltas", "183 Liters", "2 Stars", "Freezer on Top"],
     price: 25990,
     discount: 52,
-    brand: "Voltas",
+    brand: "voltas",
     capacity: 183,
     configuration: "Freezer on Top",
     beeStarRating: 2,
@@ -653,7 +653,7 @@ export const product_list = [
     title:
       "Sony BRAVIA 2 Series 108 cm (43 inches) 4K Ultra HD Smart LED Google TV K-43S20B (Black)",
     model: "Sony(Bravia (43 inch))",
-    category: "Appliances",
+    category: "appliances",
     images: sony_tv,
     productImage: [
       sony_tv,
@@ -672,7 +672,7 @@ export const product_list = [
     ],
     price: 59900,
     discount: 35,
-    brand: "Sony",
+    brand: "sony",
     screenSize: 43,
     display: "LED",
     resolution: "4K",
@@ -690,7 +690,7 @@ export const product_list = [
     title:
       "LG 164 cm (65 inches) 4K Ultra HD Smart LED TV 65UQ7500PSF (Ceramic Black)",
     model: "LG(HD Smart LED (43 inch))",
-    category: "Appliances",
+    category: "appliances",
     images: lg_tv,
     productImage: [lg_tv, lg_tv_1, lg_tv_2, lg_tv_3, lg_tv_4, lg_tv_5],
     specifications: [
@@ -702,7 +702,7 @@ export const product_list = [
     ],
     price: 119990,
     discount: 50,
-    brand: "Lg",
+    brand: "lg",
     screenSize: 65,
     display: "LED",
     resolution: "4K",
@@ -723,7 +723,7 @@ export const product_list = [
     title:
       "Redmi Xiaomi 138 cm (55 inch) F Series UHD 4K Smart LED Fire TV L55MA-FVIN (Black)",
     model: "Redmi (UHD 4K Smart (55 inch))",
-    category: "Appliances",
+    category: "appliances",
     images: redmi_tv,
     productImage: [
       redmi_tv,
@@ -742,7 +742,7 @@ export const product_list = [
     ],
     price: 54999,
     discount: 40,
-    brand: "Redmi",
+    brand: "redmi",
     screenSize: 55,
     display: "LED",
     resolution: "UHD 4K",
@@ -760,7 +760,7 @@ export const product_list = [
     title:
       "Panasonic 80 cm (32 inches) HD Ready Smart LED Google TV TH32MS660DX (Black)",
     model: "Panasonic(HD Smart (32 inch))",
-    category: "Appliances",
+    category: "appliances",
     images: panasonic_tv,
     productImage: [
       panasonic_tv,
@@ -779,7 +779,7 @@ export const product_list = [
     ],
     price: 20990,
     discount: 29,
-    brand: "Panasonic",
+    brand: "panasonic",
     "screen-size": 32,
     display: "LED",
     resolution: "HD Smart",
@@ -799,7 +799,7 @@ export const product_list = [
     title:
       "Samsung 163 cm (65 inches) D Series Brighter Crystal 4K Vivid Pro Ultra HD Smart LED TV UA65DUE77AKLXL (Black)",
     model: "Samsung (4K UHD Smart LED (65 inch))",
-    category: "Appliances",
+    category: "appliances",
     images: samsung_tv,
     productImage: [
       samsung_tv,
@@ -817,7 +817,7 @@ export const product_list = [
     ],
     price: 99900,
     discount: 36,
-    brand: "Samsung",
+    brand: "samsung",
     screenSize: 65,
     display: "UHD",
     resolution: "4K",
@@ -836,7 +836,7 @@ export const product_list = [
     title:
       "Samsung 7 kg, 5 Star, AI Control, Wi-Fi, Digital Inverter, Motor, Fully-Automatic Front Load Washing Machine (WW70T502NAN1TL, Hygiene Steam, Inox)",
     model: "Samsung (Washing Machine (7kg))",
-    category: "Appliances",
+    category: "appliances",
     brand: "samsung",
     images: samsung_washing_machine_black,
     productImage: [
@@ -855,7 +855,7 @@ export const product_list = [
       "Delay Start",
     ],
     dimensions: "45D x 60W x 85H Centimeters",
-    brand: "Samsung",
+    brand: "samsung",
     capacity: 7,
     specialFeature:
       "Protective Rat Mesh, Child Lock, Hygiene Steam, Drum Clean, Delay Start",
@@ -872,7 +872,7 @@ export const product_list = [
     title:
       "IFB 7 Kg 5 Star Powered by AI with 9 Swirl Wash, WiFi, Fully Automatic Front Load Washing Machine (SERENA GXN 7012, Steam Refresh Program with Eco Inverter, Grey)",
     model: "IFB (Washing Machine (7kg))",
-    category: "Appliances",
+    category: "appliances",
     brand: "ifb",
     images: ifb_washing_machine_silver,
     productImage: [
@@ -891,7 +891,7 @@ export const product_list = [
       "Powered by AI",
     ],
     dimensions: "51.8D x 59.8W x 87.5H Centimeters",
-    brand: "IFB",
+    brand: "ifb",
     capacity: 7,
     specialFeature:
       "Eco Inverter Motor, Child Lock, Steam Refresh, 9 Swirl Wash, Powered by AI",
@@ -909,7 +909,7 @@ export const product_list = [
     title:
       "JBL C150SI with One Button Universal Remote Wired  (Red, In the Ear)",
     model: "Headphone",
-    category: "Accessories",
+    category: "accessories",
     images: jbl_headphone,
     productImage: [
       jbl_headphone,
@@ -919,7 +919,7 @@ export const product_list = [
       jbl_headphone_4,
       jbl_headphone_5,
     ],
-    brand: "JBL",
+    brand: "jbl",
     color: "red",
     EarPlacement: "In Ear",
     FormFactor: "In Ear",
@@ -937,7 +937,7 @@ export const product_list = [
     title:
       "JBL Wave Buds 2 ANC Earbuds with BTv5.3,Multi Connect,Fast Charge,40H runtime,4 Mics Bluetooth  (Black, In the Ear)",
     model: "Headphone",
-    category: "Accessories",
+    category: "accessories",
     images: jbl_airpod,
     productImage: [
       jbl_airpod,
@@ -948,7 +948,7 @@ export const product_list = [
       jbl_airpod_5,
     ],
     specifications: ["Multi Connect", "Fast Charge", "40H runtime"],
-    brand: "JBL",
+    brand: "jbl",
     color: "black",
     EarPlacement: "In Ear",
     FormFactor: "True Wireless",
@@ -964,7 +964,7 @@ export const product_list = [
     title:
       "JBL Tune 520 BT 57Hr Playtime, Pure Bass, Multi Connect Bluetooth Headset, BT 5.3LE Bluetooth  (Blue, On the Ear)",
     model: "Headphone",
-    category: "Accessories",
+    category: "accessories",
     images: jbl_headset,
     productImage: [
       jbl_headset,
@@ -984,7 +984,7 @@ export const product_list = [
       "JBL PURE BASE SOUND: Packed with 32mm Dynamic drivers, the JBL Tune 510BT features the renowned JBL Pure Bass sound, which can be found in the most famous venues all around the world.",
       "UPTO 40 HOURS PLAYTIME: Designed for long playhours, the Tune 510BT allows you to Listen wirelessly upto 40 hours non-stop under optimal audio settings.",
     ],
-    brand: "JBL",
+    brand: "jbl",
     color: "blue",
     EarPlacement: "On Ear",
     FormFactor: "On Ear",
@@ -997,7 +997,7 @@ export const product_list = [
     title:
       "Noise Newly Launched Airwave Bluetooth Neckband with 50H of Playtime, 3 EQ Modes, ENC for Calling, Low Latency(Upto 50ms), 10mm Driver, BT v5.3(Jet Black)",
     model: "Headphone",
-    category: "Accessories",
+    category: "accessories",
     images: noise_neckband,
     productImage: [
       noise_neckband,
@@ -1018,7 +1018,7 @@ export const product_list = [
       "3 EQ Modes (Tru bass, Tru balance, Tru rock ) You deserve to listen to audio the way you like best.",
       "We make that happen for you with Tru Bass, Tru Balance and Tru Rock.",
     ],
-    brand: "Noise",
+    brand: "noise",
     color: "black",
     EarPlacement: "In Ear",
     FormFactor: "In Ear",
@@ -1031,7 +1031,7 @@ export const product_list = [
     title:
       "Noise Newly Launched Buds VS501 in-Ear Truly Wireless Earbuds with 50H of Playtime, Quad mic ENC, 10mm Driver, Dual Device Pairing, Dual Color Tones, BT v5.3 (Forest Green)",
     model: "Headphone",
-    category: "Accessories",
+    category: "accessories",
     images: noise_airpod,
     productImage: [
       noise_airpod,
@@ -1049,7 +1049,7 @@ export const product_list = [
       "Dual colour tones: Make a statement with sleek earbuds that bring style and contrast to your everyday look.",
       "10mm driver: Dive into rich, dynamic sound with powerful bass and clear highs, all packed into a compact design.",
     ],
-    brand: "Noise",
+    brand: "noise",
     color: "green",
     EarPlacement: "In Ear",
     FormFactor: "True Wireless",
@@ -1062,7 +1062,7 @@ export const product_list = [
     title:
       "Noise Two Wireless On Ear Headphones with 50 Hours Playtime, Low Latency(up to 40ms), 4 Play Modes, Dual Pairing, BT v5.3 (Bold Black)",
     model: "Headphone",
-    category: "Accessories",
+    category: "accessories",
     images: noise_headset,
     productImage: [
       noise_headset,
@@ -1083,7 +1083,7 @@ export const product_list = [
       "IPX5 water resistance: Stay protected from splashes, dust and moisture at all times.",
       "Bluetooth 5.3: Get consistent connectivity with Bluetooth 5.3.",
     ],
-    brand: "Noise",
+    brand: "noise",
     color: "black",
     EarPlacement: "On Ear",
     FormFactor: "On Ear",
@@ -1096,7 +1096,7 @@ export const product_list = [
     title:
       "Boult Q Over Ear Bluetooth Headphones with 70H Playtime, 40mm Bass Drivers, Zen™ ENC Mic, Type-C Fast Charging, 4 EQ Modes, BTv 5.4, AUX Option, Easy Control, IPX5 headphones wireless with mic (Black)",
     model: "Headphone",
-    category: "Accessories",
+    category: "accessories",
     images: boult_headset,
     productImage: [
       boult_headset,
@@ -1121,7 +1121,7 @@ export const product_list = [
       "Multiple EQ Modes – Switch between Movie, Music, and News EQ modes to fine-tune your sound. These presets let you personalize audio for an enhanced experience across all types of content, from TV shows to playlists.",
       "Foldable & Portable Design – Boult Anchor’s over-ear headphones are compact and foldable, perfect for travel, office, or gym. A stylish addition to your headphone collection",
     ],
-    brand: "Boult",
+    brand: "boult",
     color: "black",
     EarPlacement: "On Ear",
     FormFactor: "Over Ear",
@@ -1134,7 +1134,7 @@ export const product_list = [
     title:
       "Noise Newly Launched Buds X2 in-Ear Truly Wireless Earbuds with Massive 140H of Playtime, ANC (up to 32dB), Rubberised Finish, Dual Device Pairing, Dual EQ Modes, BT v5.3 (Tide Blue)",
     model: "Headphone",
-    category: "Accessories",
+    category: "accessories",
     images: boult_airpod,
     productImage: [
       boult_airpod,
@@ -1160,7 +1160,7 @@ export const product_list = [
       "Low latency mode – Game with real-time audio sync for zero lag.",
       "Rubberised finish – Designed to grip, styled to stand out.",
     ],
-    brand: "Boult",
+    brand: "boult",
     color: "blue",
     EarPlacement: "In Ear",
     FormFactor: "True Wireless",
@@ -1173,7 +1173,7 @@ export const product_list = [
     title:
       "Oneplus Bullets Z2 Bluetooth Wireless in Ear Earphones with Mic, Bombastic Bass - 12.4 mm Drivers, 10 Mins Charge - 20 Hrs Music, 30 Hrs Battery Life, IP55 Dust and Water Resistant (Magico Black)",
     model: "Headphone",
-    category: "Accessories",
+    category: "accessories",
     images: boult_neckband,
     productImage: [
       boult_neckband,
@@ -1196,7 +1196,7 @@ export const product_list = [
       "Anti-distortion audio technology ensures your audio playtime stays silky-smooth. Thanks to the larger sound cavity and industry-leading algorithms, notes remain distortion-free",
       "Water and sweat-resistant, the IP55-rated internals and design ensure your OnePlus Bullets Wireless Z2 stay all-weather ready.",
     ],
-    brand: "Oneplus",
+    brand: "oneplus",
     color: "black",
     EarPlacement: "In Ear",
     FormFactor: "In Ear",
@@ -1209,7 +1209,7 @@ export const product_list = [
     title:
       "Ambrane MagSafe Wireless 10000mAh Fast Charging Power Bank, Strong Magnet, 22.5W Output for iPhone 12 & Above, Android & Other Qi Enabled Devices + Magnetic Ring (Aerosync Snap, Purple)",
     model: "Chargers",
-    category: "Accessories",
+    category: "accessories",
     images: ambrane_powerbank,
     productImage: [
       ambrane_powerbank,
@@ -1233,7 +1233,7 @@ export const product_list = [
       "Multi-Device Compatibility: Compatible with iPhone 12 and above for MagSafe, and all iPhone 8 and above models and Android phones through wired and wireless connections.",
       "Enhanced Safety Features: Multiple layers of protection and auto-connect feature ensure safe and reliable charging, protecting your devices from overcharging, short circuits, and more.",
     ],
-    brand: "Ambrane",
+    brand: "ambrane",
     batteryCapacity: "10000 Miliamp Hours",
     specialFeature: "Fast Charging",
     connectorType: "USB",
@@ -1245,7 +1245,7 @@ export const product_list = [
     title:
       "Portronics Luxcell B 20K Advanced 20000 mAh Power Bank with 22.5W Max Output, LED Battery Display, 22.5w Mach USB-A Output, 20w Type C PD Output, Type C Input, Wake Up Button(Black)",
     model: "Chargers",
-    category: "Accessories",
+    category: "accessories",
     images: protonic_powerBank,
     productImage: [
       protonic_powerBank,
@@ -1269,7 +1269,7 @@ export const product_list = [
       "LED Battery Display: Featuring a transparent plastic casing with an LED battery Display, this 20000mAh fast-charging power bank keeps you updated on both its power level and your device's charge status.",
       "BIS-approved: With advanced chip protection layers, this durable power bank shields your devices from short circuits, high temperatures, and over-voltage issues. Charge for 3 hours before first use.",
     ],
-    brand: "Protronics",
+    brand: "protronics",
     batteryCapacity: "20000 Miliamp hours",
     specialFeature: "Dual Output (Type C + USB}",
     connectorType: "USB",
@@ -1281,7 +1281,7 @@ export const product_list = [
     title:
       "Xiaomi Power Bank 4i 20000mAh 33W Super Fast Charging PD | Power Delivery |QC 3.0|Type C Input & Output |Triple Output Ports|Olive Green|Supports Android,Apple, Tablets, Earbuds, Watch (MI Powerbank)",
     model: "Chargers",
-    category: "Accessories",
+    category: "accessories",
     images: xiaomi_powerBank,
     productImage: [
       xiaomi_powerBank,
@@ -1303,7 +1303,7 @@ export const product_list = [
       "Power Delivery and QC 3.0 Support.",
       "Smart Power Management",
     ],
-    brand: "Xiaomi",
+    brand: "xiaomi",
     batteryCapacity: "20000 Miliamp Hours",
     connectorType: "USB Type C",
     specialFeature: "Triple Port Charging",
@@ -1315,7 +1315,7 @@ export const product_list = [
     title:
       "HP 255 G10 Laptop (AMD Athlon Silver 7120U/ 8GB RAM / 256GB SSD/Windows 11/15.6 INCH ASH Silver",
     model: "Laptop",
-    category: "Laptops",
+    category: "laptops",
     images: hp_laptop,
     productImage: [
       hp_laptop,
@@ -1340,7 +1340,7 @@ export const product_list = [
       "Ports - 1 USB Type-C 5Gbps signaling rate 2 USB Type-A 5Gbps signaling rate 1 AC power 1 HDMI 1.4b 1 stereo headphone/microphone combo jack",
       "Other Features: Webcam:720p HD camera|Networking: Realtek Wi-Fi 6 RTL8852BE (2x2) and Bluetooth 5.3 wireless card| Battery: HP Long Life 3-cell, 41 Wh Li-ion|Keybaord: Spill-resistant, full-size keyboard with numeric keypad",
     ],
-    brand: "Hp",
+    brand: "hp",
     hardDiskSize: "256 GB",
     ram: "8 GB",
     operatingSystem: "windows 11",
@@ -1352,7 +1352,7 @@ export const product_list = [
     title:
       "2022 Apple MacBook Air Laptop with M2 chip: 13.6-inch Liquid Retina Display, 16GB RAM, 256GB SSD Storage, Backlit Keyboard, 1080p FaceTime HD Camera. Works with iPhone and iPad; Midnight",
     model: "Laptop",
-    category: "Laptops",
+    category: "laptops",
     images: macbook_laptop,
     productImage: [
       macbook_laptop,
@@ -1377,7 +1377,7 @@ export const product_list = [
       "BIG, BEAUTIFUL DISPLAY – The 34.46-centimetre (13.6-inch) Liquid Retina display features over 500 nits of brightness, P3 wide colour and support for one billion colours for vibrant images and incredible detail.",
       "ADVANCED CAMERA AND AUDIO – Look sharp and sound great with a 1080p FaceTime HD camera, three-mic array and four-speaker sound system with Spatial Audio.",
     ],
-    brand: "Apple",
+    brand: "apple",
     hardDiskSize: 256,
     ram: 16,
     operatingSystem: "Mac OS",
@@ -1389,7 +1389,7 @@ export const product_list = [
     title:
       "Dell Inspiron 15-3530 Laptop - 15.6 inch FHD, 13th Gen Intel Core i3-1305U, 8GB RAM, 512GB SSD, Win 11 + Office H&S 2024, Standard Keyboard, Platinum Silver, 1 Year Onsite Hardware Service, 1.62 Kg",
     model: "Laptop",
-    category: "Laptops",
+    category: "laptops",
     images: dell_laptop,
     productImage: [
       dell_laptop,
@@ -1414,7 +1414,7 @@ export const product_list = [
       "CONNECTIVITY OPTIONS: Stay connected with Wi-Fi 6 and Bluetooth 52 for seamless wireless experiences",
       "HD DISPLAY: Enjoy vibrant visuals on the 15.6-inch Full HD display with 120Hz refresh rate and IPS technology",
     ],
-    brand: "Dell",
+    brand: "dell",
     hardDiskSize: 512,
     ram: 16,
     operatingSystem: "windows 11",
@@ -1426,7 +1426,7 @@ export const product_list = [
     title:
       "Samsung Galaxy S24 FE 5G AI Smartphone (Graphite, 8GB RAM, 128GB Storage)",
     model: "Smartphone",
-    category: "Smartphones",
+    category: "smartphones",
     images: samsung_mobile,
     productImage: [
       samsung_mobile,
@@ -1451,7 +1451,7 @@ export const product_list = [
       "With Galaxy AI's Photo Assist, transform images into stunning works of art.",
       "Enjoy hyper-realistic gaming experience with enhanced vapour chamber and up to 28 hours of video playback with massive 4700 mAh battery",
     ],
-    brand: "Samsung",
+    brand: "samsung",
     ram: 8,
     operatingSystem: "Android 14",
     price: 59999,
@@ -1461,7 +1461,7 @@ export const product_list = [
     _id: "32",
     title: "Apple iPhone 15 (128 GB) - Black",
     model: "Smartphone",
-    category: "Smartphones",
+    category: "smartphones",
     images: apple_mobile,
     productImage: [
       apple_mobile,
@@ -1485,7 +1485,7 @@ export const product_list = [
       "NEXT-GENERATION PORTRAITS — Capture portraits with dramatically more detail and color. Just tap to shift the focus between subjects — even after you take the shot.",
       "POWERHOUSE A16 BIONIC CHIP — The superfast chip powers advanced features like computational photography, fluid Dynamic Island transitions, and Voice Isolation for phone calls. And A16 Bionic is incredibly efficient to help deliver great all-day battery life.",
     ],
-    brand: "Apple",
+    brand: "apple",
     ram: "N/A",
     operatingSystem: "iOS",
     price: 69900,
@@ -1496,7 +1496,7 @@ export const product_list = [
     title:
       "OnePlus Nord CE4 Lite 5G (Super Silver, 8GB RAM, 256GB Storage) | Lifetime Display Warranty | 5500 mAh Battery, 80W SUPERVOOC and Reverse Charging | 50MP Camera with OIS | 120Hz AMOLED Display",
     model: "Smartphone",
-    category: "Smartphones",
+    category: "smartphones",
     images: oneplus_mobile,
     productImage: [
       oneplus_mobile,
@@ -1522,7 +1522,7 @@ export const product_list = [
       "Dual Stereo Speakers: Experience an astonishing 300% increase in volume with the OnePlus Nord CE4 Lite’s dual stereo speakers. You won’t need earplugs, but you might need to apologize to your neighbors for the party vibes!",
       "AI Smart Cutout: Use AI Smart Cutout to swiftly edit photos, choose and personalize cutout selections, and share them with a single tap. OxygenOS14: OxygenOS 14 isn’t just smarter—it’s designed to deliver sustained smoothness and security with guaranteed support for two major Android updates and three years of essential security updates.",
     ],
-    brand: "Oneplus",
+    brand: "oneplus",
     ram: 8,
     operatingSystem: "Oxygen OS",
     price: 23999,
@@ -1533,7 +1533,7 @@ export const product_list = [
     title:
       "Apple Watch SE (2nd Gen, 2023) [GPS 40mm] Smartwatch with Midnight Aluminum Case with Ink Sport Loop. Fitness & Sleep Tracker, Crash Detection, Heart Rate Monitor, Retina Display",
     model: "Smartwatch",
-    category: "Smartwatches",
+    category: "smartwatches",
     images: apple_smartwatch,
     productImage: [
       apple_smartwatch,
@@ -1556,7 +1556,7 @@ export const product_list = [
       "SIMPLY COMPATIBLE — It works seamlessly with your Apple devices and services. Unlock your Mac automatically. Find your devices easily.",
       "SWIMPROOF AND FASHIONABLE — 50 m water resistance. Three finishes. And a colour-matched back case made with a production process that reduces its carbon emissions.",
     ],
-    brand: "Apple",
+    brand: "apple",
     operatingSystem: "Ios",
     price: 24900,
     discount: 0,
@@ -1566,7 +1566,7 @@ export const product_list = [
     title:
       "Noise Pulse 2 Max 1.85 inch Display, Bluetooth Calling Smart Watch, 10 Days Battery, 550 NITS Brightness, Smart DND, 100 Sports Modes, Smartwatch for Men and Women (Jet Black)",
     model: "Smartwatch",
-    category: "Smartwatches",
+    category: "smartwatches",
     images: noise_smartwatch,
     productImage: [
       noise_smartwatch,
@@ -1599,7 +1599,7 @@ export const product_list = [
     title:
       "boAt New Launch Storm Infinity w/15 Days Extensive Battery fueled by Huge 550mAh Battery, Fast Charge, 1.83”(4.65cm)HD Display, Functional Crown, BT Calling, Smart watch for Men & Women (Active Black).",
     model: "Smartwatch",
-    category: "Smartwatches",
+    category: "smartwatches",
     images: boat_smartwatch,
     productImage: [
       boat_smartwatch,

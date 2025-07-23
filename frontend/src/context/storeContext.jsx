@@ -1,15 +1,9 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { product_list } from "../assets/asset";
-import {useLocation, useParams, useSearchParams} from "react-router-dom"
 
 const StoreContext = createContext();
 
 export const StoreProvider = ({ children }) => {
-
-  // Update the Breadscrumb and Count
-  const location = useLocation()
-  const {categories} = useParams()
-  const [searchParams] = useSearchParams()
 
   // To show all the product with filter product also
   const [products] = useState(product_list);
@@ -24,31 +18,7 @@ export const StoreProvider = ({ children }) => {
   const allPrice = product_list.map((item) => item.price);
   const minPrice = Math.min(...allPrice);
   const maxPrice = Math.max(...allPrice);
-  const [priceRange, setPriceRange] = useState([minPrice, maxPrice]);
-
-  // apply useEffect for Udpate the value
-  useEffect(() => {
-    const categoryURL = categories || ""
-    const brandURL = searchParams.get("brand")
-
-    if(categoryURL && !selectCategory.includes(categoryURL)){
-      setSelectCategory([categoryURL])
-    }
-
-    if(categoryURL && selectCategory.length > 0){
-      setSelectCategory([])
-    }
-
-    if(brandURL && !selectBrand.includes(brandURL)){
-      setSelectBrand([brandURL])
-    }
-
-    if(brandURL && selectBrand.length > 0){
-      setSelectBrand([])
-    }
-
-  }, [location, categories, searchParams])
-   
+  const [priceRange, setPriceRange] = useState([minPrice, maxPrice]);   
 
   // Update the value using the useEffect
   useEffect(() => {
@@ -69,14 +39,14 @@ export const StoreProvider = ({ children }) => {
     // update the Category
     if (selectCategory.length > 0) {
       filtered = filtered.filter((item) => {
-        return selectCategory.includes(item.category);
+        return selectCategory.includes(item.category?.toLowerCase());
       });
     }
 
     // update the Brand
     if (selectBrand.length > 0) {
       filtered = filtered.filter((item) => {
-        return selectBrand.includes(item.brand);
+        return selectBrand.includes(item.brand?.toLowerCase());
       });
     }
 

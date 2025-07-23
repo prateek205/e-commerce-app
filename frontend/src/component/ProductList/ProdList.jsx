@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./ProdList.css";
 import ProductMenu from "../ProductMenu/ProductMenu";
 import { useStore } from "../../context/storeContext";
-import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import Breadscrum from "../../Helper/breadscrum/Breadscrum";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const ProdList = () => {
   const brands = [
@@ -38,9 +38,7 @@ const ProdList = () => {
   ];
 
   const navigate = useNavigate();
-  const { categories } = useParams();
-  const [searchParams] = useSearchParams();
-  const brandItem = searchParams.get("brand");
+  const location = useLocation();
 
   const [showAllBrands, setShowAllBrands] = useState(false);
   const brandLimit = 5;
@@ -61,21 +59,7 @@ const ProdList = () => {
     maxPrice,
   } = useStore();
 
-  // handle the check and uncheck brand and Category
-
-  const filterByCategoryAndBrand = filterProduct.filter((product) => {
-    const matchCategory =
-      selectCategory.length > 0
-        ? selectCategory.includes(product.category.toLowerCase())
-        : true;
-
-    const matchBrand =
-      selectBrand.length > 0
-        ? selectBrand.includes(product.brand.toLowerCase())
-        : true;
-
-    return matchCategory && matchBrand;
-  });
+  const filterList = filterProduct;
 
   const handleCategoryChange = (category) => {
     setSelectCategory((prev) => {
@@ -109,7 +93,23 @@ const ProdList = () => {
     });
   };
 
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const category = searchParams.get("category");
+    const brand = searchParams.get("brand");
 
+    if (category) {
+      setSelectCategory([category.toLowerCase()]);
+    } else {
+      setSelectCategory([]);
+    }
+
+    if (brand) {
+      setSelectBrand([brand.toLowerCase()]);
+    } else {
+      setSelectBrand([]);
+    }
+  }, [location.search]);
 
   return (
     <React.Fragment>
@@ -125,7 +125,7 @@ const ProdList = () => {
                       <li>
                         <input
                           type="checkbox"
-                          checked={selectCategory.includes(item)}
+                          checked={selectCategory.includes(item.toLowerCase())}
                           onChange={() => handleCategoryChange(item)}
                           name={item}
                         />
@@ -161,7 +161,7 @@ const ProdList = () => {
                       <li>
                         <input
                           type="checkbox"
-                          checked={selectBrand.includes(brand)}
+                          checked={selectBrand.includes(brand?.toLowerCase())}
                           onChange={() => handleBrandChange(brand)}
                           name={brand}
                         />
@@ -188,8 +188,8 @@ const ProdList = () => {
           </div>
           <div className="allProd">
             <p>
-              All Products: <span> {filterByCategoryAndBrand.length} </span>{" "}
-              Items out of <span>{products.length}</span> Items
+              All Products: <span> {filterList.length} </span> Items out of{" "}
+              <span>{products.length}</span> Items
             </p>
           </div>
           <div className="product_sort_list">

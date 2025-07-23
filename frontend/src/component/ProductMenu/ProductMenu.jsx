@@ -12,8 +12,9 @@ const ProductMenu = () => {
   const categoryParams = selectCategory ? selectCategory.split(",") : [];
   const brandParams = selectBrand ? selectBrand.split(",") : [];
   const { filterProduct } = useStore();
+  const filteredList = filterProduct
 
-  const filterByCategoryAndBrand = filterProduct.filter((product) => {
+  const filterByCategoryAndBrand = filteredList.filter((product) => {
     const matchCategory =
       categoryParams.length > 0
         ? categoryParams.includes(product.category?.toLowerCase())
@@ -29,12 +30,12 @@ const ProductMenu = () => {
 
   const initialCount = 18;
   const [showProduct, setShowProduct] = useState(
-    filterByCategoryAndBrand.slice(0, initialCount)
+    filteredList.slice(0, initialCount)
   );
 
   useEffect(() => {
-    setShowProduct(filterByCategoryAndBrand.slice(0, initialCount));
-  }, [filterProduct]);
+    setShowProduct(filteredList.slice(0, initialCount));
+  }, [filteredList]);
 
   const loadMore = () => {
     const nextItem = filterByCategoryAndBrand.slice(
@@ -76,7 +77,7 @@ const ProductMenu = () => {
                     <img src={item.images} alt="" />
                   </div>
                   <div className="product_menu_content">
-                    <Link to={`/product/${item.category}/${item._id}`}>
+                    <Link to={`/product/${item.category}/${item.brand}/${item._id}`}>
                       <div className="product_menu_heading">
                         <h2>{item.title.slice(0, 120)}</h2>
                       </div>
